@@ -1,0 +1,1 @@
+{"id":"cmpl-8hz5YB7TLuerHSv2xrWNBu59QJvJJ","object":"text_completion","created":1705493620,"model":"gpt-3.5-turbo-instruct","choices":[{"text":"\n\nThe circumference of Earth is approximately 24,901 miles (40,075 kilometers","index":0,"logprobs":null,"finish_reason":"length"}],"usage":{"prompt_tokens":7,"completion_tokens":17,"total_tokens":24}}
