@@ -22,18 +22,13 @@ if [ $# -eq 0 ]
 fi
 
 
-# completions method
-data='{
-"model": "gpt-3.5-turbo-instruct",
-"prompt": "'$prompt'",
-"max_tokens": 17,
-"temperature": 0
-}'
-
-curl https://api.openai.com/v1/completions \
+# completions chat method
+data='{"model": "gpt-4", "messages": [{"role": "user", "content": "'$prompt'"}]}'
+curl https://api.openai.com/v1/chat/completions \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer $OPENAI_API_KEY" \
 -d "$data" \
-| grep -Po '"text"\s*:\s*".*",'
+| grep -Po '"content"\s*:\s*".*"'
+
 
 # remove the greps to get the raw response json

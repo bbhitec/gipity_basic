@@ -1,6 +1,7 @@
-# gipity - OpenAI Client
+# gipity - OpenAI Clients
 
-Basic version: tools to access OpenAI API using various languages. From JS level API calls to standalone scripts
+##### _Basic version_
+tools to access OpenAI API using various languages. From JS level API calls to standalone scripts
 
 ## Feats/WIP
 
@@ -15,6 +16,8 @@ Basic version: tools to access OpenAI API using various languages. From JS level
 
 ![](https://shields.io/badge/-javascript-4377cb?logo=javascript)
 ![](https://shields.io/badge/-bash-4377cb?logo=gnubash)
+![](https://shields.io/badge/-powershell-4377cb?logo=powershell)
+![](https://shields.io/badge/-json-4377cb?logo=json)
 
 - Basic API treatment in JS
 - [x] json manipulations
