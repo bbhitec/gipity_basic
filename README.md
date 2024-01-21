@@ -6,7 +6,8 @@ tools to access OpenAI API using various languages. From JS level API calls to s
 ## Feats/WIP
 
 - [ ] Basic js version
-- [x] Bash curl script 
+    - JSON manipulations
+- [x] Bash curl script
 - [ ] Powershell (windows) script
     - Parametrize
 - [ ] python script

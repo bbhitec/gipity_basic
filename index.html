@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
-<title>gipitty-chat</title>
 
 <head>
     <meta charset='utf-8'>
-    <title>Page Title</title>
+    <title>Gipity - OpenAI client</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    Hello to you GPT
+    <section class="sidebar-section">
+        <button class="newchat-button">New Chat</button>
+        <div class="history">
+            <!-- [demo] chats history will be injected here with JS -->
+            <p>Test</p>
+        </div>
+        <nav class="nav">
+            <p>Made with ☕ by <a href="https://www.vnikolin.com" target="_blank">vnikolin</a></p>
+        </nav>
+    </section>
+    <section class="main-section">
+        <h1 class="big-title">gipity</h1>
+        <p id="output"></p>
+        <div class="bottom-content">
+            <div class="input-container">
+                <input id="input" value="What are 100 km in miles?"/>
+                <div id="submit">Send</div>
+            </div>
+        </div>
+        <p class="info">DISCLAIMER: This it lorem ipsum...</p>
+    </section>
     <script src='main.js'></script>
 </body>
 

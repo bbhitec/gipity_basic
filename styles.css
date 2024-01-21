@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://drive.google.com/file/d/1-5dSKQdSEgk5BOMNJuxAqHbSwiVedS_P/view?usp=sharing');
+
+/* GENERAL STYLES */
+
+* {
+    color: #efefef;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #161d27;
+    display: flex;  /* [demo] allow sidebar layout */
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: 700;
+    padding: 200px 0; /* [demo] tpo-bottom, left-right*/
+}
+
+
+/* SIDEBAR STYLES */
+
+.sidebar-section {
+    background-color: #06080b;
+    width: 230px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* [demo] stack children vertically */
+    justify-content: space-between;
+}
+
+.newchat-button {
+    border: solid 0.5px rgba(219, 219, 219, 0.5);
+    background-color: transparent;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px;
+}
+
+nav {
+    border-top: solid 0.5px rgba(219, 219, 219, 0.5);
+    padding: 10px;
+    margin: 10px;
+    font-weight: 300;
+    font-size: 9px;
+    align-content: center;
+    justify-content: right;
+}
+
+.history {
+    padding: 10px;
+    margin: 10px;
+}
+
+.history p {
+    cursor: pointer;
+}
+
+
+/* MAIN SECTION STYLES */
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+}
+
+.bottom-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    color: rgba(219, 219, 219, 0.5);
+    font-size: 11px;
+    padding: 10px;
+}
+
+input {
+    border: none;
+    background-color: #4377cb;
+    width: 100%;
+    font-size: 20px;
+    padding: 12px 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 5px 5px 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.input-container {
+    position: relative; /* have the children with absolute position */
+    width: 100%;
+    max-width: 650px;
+}
+
+.input-container #submit {
+    position: absolute;
+    right: 0;
+    bottom: 22px;
+    cursor: pointer;
+}
