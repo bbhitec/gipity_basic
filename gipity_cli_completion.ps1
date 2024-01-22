@@ -1,8 +1,15 @@
-# basic script to use OpenAI API
-#   usage: paste your API KEY in place of the $OPENAI_API_KEY or use external variable
-#   then run in powershell/command line: ./gipity_<variation>.sh "<prompt string>"
+#
+#    @author [bbht]
+#    @brief  basic script to use OpenAI API endpoints
+#
+#    usage: paste your API KEY in place of the $OPENAI_API_KEY or use external variable
+#    then run in bash: ./gipity_<variation>.ps1 "<prompt string>"
+#
+#    @version 2023.12
+#
 
-Write-Host '[mst] OpenAI API interfacer'
+
+Write-Host '[bbht] OpenAI API interfacer'
 
 # invoking function
 function Invoke-OpenAISummarize {
