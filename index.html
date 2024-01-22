@@ -5,21 +5,30 @@
     <meta charset='utf-8'>
     <title>Gipity - OpenAI client</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/gipity_favicon1.svg" sizes="any" type="image/svg+xml">
 </head>
 
 <body>
+
     <section class="sidebar-section">
-        <button class="newchat-button">New Chat</button>
+        <button class="newchat-button">
+            <img src="assets/gipity_logo.svg" class="chat-button-icon" draggable="false" alt="Gipity Logo">
+            New Chat
+        </button>
         <div class="history">
             <!-- [demo] chats history will be injected here with JS -->
-            <p>Test</p>
         </div>
         <nav class="nav">
-            <p>Made with ☕ by <a href="https://www.vnikolin.com" target="_blank">vnikolin</a></p>
+            <!-- <p>VERSION 12a2023Made with ☕ by <a href="https://www.vnikolin.com" target="_blank">vnikolin</a></p> -->
+            <p>VERSION 12a2023</p>
         </nav>
     </section>
+
     <section class="main-section">
-        <h1 class="big-title">gipity</h1>
+        <h1 class="big-title">
+            <img src="assets/gipity_logo.svg" class="title-logo" draggable="false" alt="Gipity Logo">
+            gipity
+        </h1>
         <p id="output"></p>
         <div class="bottom-content">
             <div class="input-container">
@@ -27,8 +36,11 @@
                 <div id="submit">Send</div>
             </div>
         </div>
-        <p class="info">DISCLAIMER: This it lorem ipsum...</p>
+        <p class="info">Made with ☕ by <a href="https://www.vnikolin.com" target="_blank">vnikolin</a></p>
+
+        <!-- <p class="info">DISCLAIMER: This it lorem ipsum...</p> -->
     </section>
+
     <script src='main.js'></script>
 </body>
 

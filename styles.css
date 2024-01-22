@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://drive.google.com/file/d/1-5dSKQdSEgk5BOMNJuxAqHbSwiVedS_P/view?usp=sharing');
 
 /* GENERAL STYLES */
 
@@ -15,10 +14,10 @@ body {
     display: flex;  /* [demo] allow sidebar layout */
 }
 
-h1 {
+.big-title {
     font-size: 35px;
     font-weight: 700;
-    padding: 200px 0; /* [demo] tpo-bottom, left-right*/
+    padding: 100px 0; /* [demo] tpo-bottom, left-right*/
 }
 
 
@@ -38,7 +37,15 @@ h1 {
     background-color: transparent;
     border-radius: 6px;
     padding: 10px;
-    margin: 10px;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-button-icon {
+    width: 20px;
+    margin-right: 9px;
 }
 
 nav {
@@ -46,14 +53,19 @@ nav {
     padding: 10px;
     margin: 10px;
     font-weight: 300;
-    font-size: 9px;
-    align-content: center;
-    justify-content: right;
+    font-size: 12px;
+    color: rgba(219, 219, 219, 0.5);
+    text-align: center;
 }
 
 .history {
     padding: 10px;
     margin: 10px;
+}
+
+.history-title {
+    font-size: 10px;
+    color: #c1c1c1;
 }
 
 .history p {
@@ -87,7 +99,7 @@ nav {
     padding: 10px;
 }
 
-input {
+#input {
     border: none;
     background-color: #4377cb;
     width: 100%;
@@ -98,7 +110,7 @@ input {
     box-shadow: rgba(0, 0, 0, 0.05) 5px 5px 5px;
 }
 
-input:focus {
+#input:focus {
     outline: none;
 }
 

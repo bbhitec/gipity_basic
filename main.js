@@ -6,6 +6,9 @@ const OPENAI_API_KEY = ""
 const submitButton = document.querySelector('#submit');
 const promptText = document.querySelector('#input');
 const outputText = document.querySelector('#output');
+const historySection = document.querySelector('.history')
+const newChatButton = document.querySelector('.newchat-button')
+var hasHistory = false
 
 async function getMessage() {
     const options = {
@@ -25,12 +28,39 @@ async function getMessage() {
         res = await fetch("https://api.openai.com/v1/chat/completions", options)
         const data = await res.json()
         console.log(data)
-        outputText.textContent = data.choices[0].message.content
+        const resMessage = data.choices[0].message.content
+
+        // show the response to the user
+        outputText.textContent = resMessage 
+
+        // add answer to the history, if valid
+        if (resMessage && promptText.value) {
+            if (hasHistory === false) {
+                const pElementTitle = document.createElement('p')
+                pElementTitle.classList.add('history-title')
+                pElementTitle.textContent = 'HISTORY'
+                historySection.append(pElementTitle)
+                hasHistory = true
+            }
+            const pElement = document.createElement('p')
+            pElement.textContent = promptText.value
+            // an option to recall the history on click
+            pElement.addEventListener('click', () => changeInput(pElement.textContent))
+            historySection.append(pElement)
+        }
     }
     catch (err){
         console.error(err)
     }
 }
 
+
+function changeInput (newValue) {
+    promptText.value = newValue
+}
+
 // [demo] link a submit button to the sending function
 submitButton.addEventListener('click', getMessage)
+
+// add chat clearing functionality
+newChatButton.addEventListener('click', () => changeInput(''))
