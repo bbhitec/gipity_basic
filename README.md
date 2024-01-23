@@ -20,6 +20,7 @@ tools to access OpenAI API using various languages. From JS level API calls to s
 ![](https://shields.io/badge/-bash-4377cb?logo=gnubash)
 ![](https://shields.io/badge/-powershell-4377cb?logo=powershell)
 ![](https://shields.io/badge/-json-4377cb?logo=json)
+![](https://shields.io/badge/-css-4377cb?logo=css3)
 
 - Basic API treatment in JS
 - [x] json manipulations
