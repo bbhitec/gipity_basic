@@ -116,13 +116,17 @@ nav {
 
 .input-container {
     position: relative; /* have the children with absolute position */
-    width: 100%;
-    max-width: 650px;
+    width: 90%;
+    max-width: 600px;
 }
 
 .input-container #submit {
     position: absolute;
-    right: 0;
-    bottom: 22px;
+    right: -10px;
+    bottom: 25px;
     cursor: pointer;
+}
+
+#output {
+    width: 75%;
 }

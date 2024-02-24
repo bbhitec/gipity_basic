@@ -1,6 +1,5 @@
 // define personal API key. should be moved to enclosed location
-const OPENAI_API_KEY = ""
-
+const OPENAI_API_KEY = "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"
 
 // [demo] get a handle to in/output texts and the submit button
 const submitButton = document.querySelector('#submit');
