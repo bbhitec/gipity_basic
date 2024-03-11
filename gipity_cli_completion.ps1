@@ -1,21 +1,40 @@
-#
-#    @author [bbht]
-#    @brief  basic script to use OpenAI API endpoints
-#
-#    usage: paste your API KEY in place of the $OPENAI_API_KEY or use external variable
-#    then run in bash: ./gipity_<variation>.ps1 "<prompt string>"
-#
-#    @version 2023.12
-#
+<#
+.SYNOPSIS
+	basic script to use OpenAI API endpoints
+.DESCRIPTION
+    basic script to use OpenAI API endpoints
+.EXAMPLE
+	PS> ./gipity_<variation>.ps1 -apiKey "sk-..." -Prompt "how wide is Earth?"
+
+    [bbht] OpenAI API interfacer
+    Assistant: The Earth has a diameter of approximately 12,742 kilometers
+.LINK
+	https://github.com/bbhitec/gipity_basic
+.NOTES
+	@author [bbht]
+    @version 2023.12
+#>
 
 
-Write-Host '[bbht] OpenAI API interfacer'
+# script parameters
+Param(
+        [Parameter(Mandatory = $true,Position = 0,HelpMessage = 'OpenAI API Token')]
+        [ValidateNotNullorEmpty()]
+        [String]$apiKey,
+        [Parameter(Mandatory = $true,Position = 1,HelpMessage = 'Prompt message')]
+        [ValidateNotNullorEmpty()]
+        [String]$Prompt
+    )
 
-# invoking function
+
+
+
+# open ai api invoking function
 function Invoke-OpenAISummarize {
+    
     param(
         [string]$apiKey,
-        # [string]$textToSummarize,
+        [string]$prompt = "Whats the distance to the moon?",
         [int]$maxTokens = 20,
         [string]$engine = 'gpt-3.5-turbo-instruct'
     )
@@ -23,8 +42,7 @@ function Invoke-OpenAISummarize {
     
     
     # preparing parameters
-    # $apiKey = ""
-    # $uri = "https://api.openai.com/v1/engines/$engine/completions"
+    # $apiKey = "" # the API can be manually set
     $uri = "https://api.openai.com/v1/completions"
     $headers = @{
         'Authorization' = "Bearer $apiKey"
@@ -33,11 +51,9 @@ function Invoke-OpenAISummarize {
     # the body of the request must be in JSON
     $body = @{
         model = $engine
-        # prompt = "Summarize the following text: `"$textToSummarize`""
-        prompt = "Whats the distance to the moon?"
+        prompt = $prompt
         max_tokens = $maxTokens
         temperature = 0
-        # n = 1
     } | ConvertTo-Json
     
     $parameters = @{
@@ -57,7 +73,17 @@ function Invoke-OpenAISummarize {
         return $null
     }
 }
-    
-# manually call the calling function
-$summary = Invoke-OpenAISummarize -apiKey ''
-Write-Output "Summary: $summary"
+
+
+############ SCRIPT RUNTIME ############
+
+# greeter message
+Write-Host '[bbht] OpenAI API interfacer'
+# pass parameters to the calling function
+$response = Invoke-OpenAISummarize -apiKey $apiKey -prompt $Prompt
+Write-Output "Assistant: $response"
+
+
+
+
+

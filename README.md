@@ -1,4 +1,4 @@
-# gipity - OpenAI Clients
+# Gipity - OpenAI Clients
 
 ##### _Basic version_
 tools to access OpenAI API using various languages. From JS level API calls to standalone scripts
@@ -10,8 +10,8 @@ tools to access OpenAI API using various languages. From JS level API calls to s
     - Deploy?
     -new chat button functionality
 - [x] Bash curl script
-- [ ] Powershell (windows) script
-    - Parametrize
+- [x] Powershell (windows) script
+    - [x] Parametrize
 - [ ] python script
 
 
@@ -27,7 +27,7 @@ tools to access OpenAI API using various languages. From JS level API calls to s
 - [x] json manipulations
 - [ ] file manipulations in webApi and node.js?
 - Bash scripting: inputs, curl, grep
-- Powershell Invoke and response manipulation
+- Powershell: Invoke and response manipulation, parametrization
 
 ## Usage/How to run
 
