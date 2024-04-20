@@ -1,0 +1,12 @@
+{
+  "name": "gipity_basic",
+  "version": "1.0.0",
+  "description": "tools to access OpenAI API using various languages. From JS level API calls to standalone scripts",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,5 +1,5 @@
-// define personal API key. should be moved to enclosed location
-const OPENAI_API_KEY = "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"
+// importing personal API key
+import OPENAI_API_KEY from "./env.js"
 
 // [demo] get a handle to in/output texts and the submit button
 const submitButton = document.querySelector('#submit');
@@ -24,7 +24,7 @@ async function getMessage() {
     }
 
     try {
-        res = await fetch("https://api.openai.com/v1/chat/completions", options)
+        const res = await fetch("https://api.openai.com/v1/chat/completions", options)
         const data = await res.json()
         console.log(data)
         const resMessage = data.choices[0].message.content

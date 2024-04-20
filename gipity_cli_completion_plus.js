@@ -12,9 +12,8 @@
 
 
 
-// define personal API key. should be moved to enclosed location
-const OPENAI_API_KEY = ""
-
+// importing personal API key
+import OPENAI_API_KEY from "./env.js"
 
 function download(content, fileName, contentType) {
     var a = document.createElement("a");
@@ -90,11 +89,11 @@ async function fetchDataChat() {
     })
 
     const data = await res.json()
-    console.log(data)
+    console.log(data.choices[0].message.content)
 }
 
 
 
 // manual calls for testing
 // fetchDataCompletion()
-// fetchDataChat()
+fetchDataChat()
