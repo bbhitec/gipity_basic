@@ -2,8 +2,7 @@
 
 ##### _Basic version_
 
-Various tools to access the OpenAI API using different languages.
-From JS app level API calls to standalone scripts
+Tools to access OpenAI API using various languages. From JS level API calls to standalone scripts
 
 ## Gains/Feats/WIP
 
@@ -33,4 +32,4 @@ From JS app level API calls to standalone scripts
 - JS app: run html in any browser (access raw data via the source/console)
 - Node.js: ```node .\gipity_cli_completion_plus.js```
 - PowerShell: ```./gipity_<variation>.ps1 -apiKey "sk-..." -Prompt "..."```
-- Bash: ```./gipity_<variation>.sh "<prompt string>"``` 
+- Bash: ```./gipity_<variation>.sh "<prompt string>"```

@@ -46,8 +46,8 @@ async function fetchDataCompletion() {
     })
 
     // [demo] async method needs to be awaited
-    // [wip][here] work with json and files
-    const data = await res.json()
+    // MARK:[wip][here] work with json and files
+        const data = await res.json()
     console.log(data)
     // const pretty_res = JSON.parse(data)
     // console.log(pretty_res.data[0])

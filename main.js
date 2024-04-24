@@ -30,7 +30,7 @@ async function getMessage() {
         const resMessage = data.choices[0].message.content
 
         // show the response to the user
-        outputText.textContent = resMessage 
+        outputText.textContent = resMessage
 
         // add answer to the history, if valid
         if (resMessage && promptText.value) {

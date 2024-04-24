@@ -31,7 +31,6 @@ Param(
 
 # open ai api invoking function
 function Invoke-OpenAISummarize {
-    
     param(
         [string]$apiKey,
         [string]$prompt = "Whats the distance to the moon?",
@@ -39,8 +38,8 @@ function Invoke-OpenAISummarize {
         [string]$engine = 'gpt-3.5-turbo-instruct'
     )
     # You can add or remove parameters as per your requirements
-    
-    
+
+
     # preparing parameters
     # $apiKey = "" # the API can be manually set
     $uri = "https://api.openai.com/v1/completions"
@@ -55,7 +54,7 @@ function Invoke-OpenAISummarize {
         max_tokens = $maxTokens
         temperature = 0
     } | ConvertTo-Json
-    
+
     $parameters = @{
         Method      = 'POST'
         URI         = $uri
@@ -63,7 +62,7 @@ function Invoke-OpenAISummarize {
         Body        = $body
         ErrorAction = 'Stop'
     }
-    
+
     # call the final function
     try {
         $response = Invoke-RestMethod @parameters
